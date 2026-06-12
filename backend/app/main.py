@@ -33,7 +33,7 @@ app.include_router(replies.router)
 
 @app.get("/")
 def root():
-    return {"service": "xeno-crm-backend", "status": "ok", "version": "1.0.0"}
+    return {"service": "shoppulse-backend", "status": "ok", "version": "1.0.0"}
 
 
 @app.get("/health")

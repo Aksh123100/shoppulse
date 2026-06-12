@@ -170,9 +170,9 @@ async def receive_message(payload: SendPayload):
 
 @app.get("/health")
 def health():
-    return {"status": "healthy", "service": "xeno-channel-stub"}
+    return {"status": "healthy", "service": "shoppulse-channel-stub"}
 
 
 @app.get("/")
 def root():
-    return {"service": "xeno-channel-stub", "status": "ok"}
+    return {"service": "shoppulse-channel-stub", "status": "ok"}
