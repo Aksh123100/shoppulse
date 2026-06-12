@@ -43,7 +43,7 @@ export default function Sidebar() {
       {/* Footer */}
       <div className="px-5 py-4 border-t border-roast-700">
         <p className="text-xs text-roast-500">Powered by</p>
-        <p className="text-xs text-roast-400 font-medium">Xeno AI Engine</p>
+        <p className="text-xs text-roast-400 font-medium">ShopPulse AI Engine</p>
       </div>
     </aside>
   )
