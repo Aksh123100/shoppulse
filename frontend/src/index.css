@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-roast-900 text-cream font-sans;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  * {
+    @apply border-roast-700;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-roast-800 rounded-xl border border-roast-700 p-6;
+  }
+
+  .card-dark {
+    @apply bg-roast-900 rounded-xl border border-roast-700 p-6;
+  }
+
+  .btn-primary {
+    @apply bg-gilt text-roast-900 font-semibold px-4 py-2 rounded-lg
+           hover:bg-espresso-400 transition-colors duration-150 text-sm;
+  }
+
+  .btn-secondary {
+    @apply bg-roast-700 text-cream font-medium px-4 py-2 rounded-lg
+           hover:bg-roast-600 transition-colors duration-150 text-sm;
+  }
+
+  .btn-ghost {
+    @apply text-espresso-300 font-medium px-4 py-2 rounded-lg
+           hover:bg-roast-700 transition-colors duration-150 text-sm;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-critical {
+    @apply badge bg-red-900/60 text-red-300 border border-red-800;
+  }
+
+  .badge-high {
+    @apply badge bg-orange-900/60 text-orange-300 border border-orange-800;
+  }
+
+  .badge-medium {
+    @apply badge bg-yellow-900/60 text-yellow-300 border border-yellow-800;
+  }
+
+  .badge-success {
+    @apply badge bg-emerald-900/60 text-emerald-300 border border-emerald-800;
+  }
+
+  .stat-label {
+    @apply text-xs font-medium text-roast-300 uppercase tracking-wider;
+  }
+
+  .stat-value {
+    @apply text-2xl font-display font-semibold text-cream;
+  }
+
+  .nav-item {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium
+           text-roast-300 hover:text-cream hover:bg-roast-700 transition-all duration-150;
+  }
+
+  .nav-item-active {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium
+           text-cream bg-roast-700 border-l-2 border-gilt;
+  }
+
+  .input {
+    @apply bg-roast-900 border border-roast-600 text-cream placeholder-roast-400
+           rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-gilt
+           focus:ring-1 focus:ring-gilt transition-colors;
+  }
+
+  .section-title {
+    @apply font-display text-xl font-semibold text-cream;
+  }
+
+  .rupee {
+    @apply font-display font-bold text-gilt;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #452919 transparent;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Pulse animation for live stats */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.live-dot {
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
